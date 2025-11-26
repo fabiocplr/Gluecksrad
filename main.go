@@ -121,7 +121,7 @@ func (g *Game) Draw(screen *ebiten.Image) {
 	ebitenutil.DrawLine(screen, cx, cy, zx, zy, color.RGBA{245, 222, 156, 255})
 
 	// Winkel in Grad
-	deg := math.Mod(g.angle*180/math.Pi, 360)
+	deg := math.Mod((g.angle+math.Pi/2)*180/math.Pi, 360)
 	if deg < 0 {
 		deg += 360
 	}
